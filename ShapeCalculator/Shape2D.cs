@@ -3,8 +3,11 @@
     public abstract class Shape2D
     {
         protected double _width;
+        
+        protected double _height;
+
         /// <summary>
-        /// Width of the 2D Shape
+        /// Width of the 2D shape
         /// </summary>
         public double Width
         {
@@ -14,15 +17,14 @@
             }
 
             private set
-            { 
+            {
                 if (value <= 0) throw new ArgumentException("Width must be positive.");
                 _width = value;
             }
         }
-        
-        protected double _height;
+
         /// <summary>
-        /// Height of the 2D Shape
+        /// Height of the 2D shape
         /// </summary>
         public double Height
         {
@@ -39,18 +41,15 @@
         }
         
         /// <summary>
-        /// Represents a 2D Shape
+        /// Represents a 2D shape
         /// </summary>
-        /// <param name="width">Width of the 2D Shape</param>
-        /// <param name="height">Height of the 2D Shape</param>
+        /// <param name="width">Width of the 2D shape</param>
+        /// <param name="height">Height of the 2D shape</param>
         /// <exception cref="ArgumentException"></exception>
         public Shape2D(double width, double height)
         {
-            if (width <= 0) throw new ArgumentException("Width must be positive.");
-            if (height <= 0) throw new ArgumentException("Height must be positive");
-
-            this._width = width;
-            this._height = height;
+            Width = width;
+            Height = height;
         }
     }
 }
