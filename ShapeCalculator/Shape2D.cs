@@ -13,13 +13,13 @@
         {
             get
             {
-                return _width;
+                return this._width;
             }
 
-            private set
+            set
             {
                 if (value <= 0) throw new ArgumentException("Width must be positive.");
-                _width = value;
+                this._width = value;
             }
         }
 
@@ -30,13 +30,13 @@
         {
             get
             {
-                return _height;
+                return this._height;
             }
 
-            private set
+            set
             {
                 if (value <= 0) throw new ArgumentException("Height must be positive.");
-                _height = value;
+                this._height = value;
             }
         }
         

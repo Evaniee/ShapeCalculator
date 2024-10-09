@@ -11,13 +11,13 @@
         {
             get
             {
-                return _depth;
+                return this._depth;
             }
 
-            private set
+            set
             {
                 if (value <= 0) throw new ArgumentException("Depth must be positive.");
-                _depth = value;
+                this._depth = value;
             }
         }
 
